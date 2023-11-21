@@ -1,0 +1,36 @@
+<div class="card" style="margin: 6rem auto; width: 32rem;">
+    <div class="card-body" >
+        <div class="text-primary text-center">
+            Password generator
+        </div>
+
+        <div>
+            <input type="text" class="form-control" placeholder="Enter length" aria-label="length"
+            aria-describedby="addon-wrapping" #vada (keyup)="getlength(vada.value)">
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="innu" (change)="includenumber()">
+            <label class="form-check-label" for="innu">
+                include num
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="inch" (change)="includecharacter()">
+            <label class="form-check-label" for="inch">
+                include char
+            </label>
+        </div>
+
+        <div>
+            <input type="btn btn-primary mb-3" style="margin:10px ;" type="submit" value="submit" (click)="genpass()">
+        </div>
+
+        <div class="container" *ngIf="generated" style="margin: auto; margin-bottom: 10px;">
+            <input type="text" class="form-control" placeholder="Generate Pass" aria-label="Enter length"
+                aria-describedby="addon-wrapping" value="{{generated}}">
+
+        </div>
+    </div>
+
+</div>

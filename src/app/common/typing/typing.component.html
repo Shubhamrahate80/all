@@ -1,0 +1,17 @@
+<div class="card text-center" style="margin: 8rem auto; width: 35rem;">
+    <div class="card-body">
+        <h3 class="text-primary text-center">Typing Master</h3>
+    </div>
+    <p>
+     <span *ngFor="let common of mytext.split(''); let i=index;" [class]="compare(common ,enteredText[i])" >
+     {{common}}
+     </span>
+    </p>
+     <input form="type-text" class="form-control" #input (keyup)="oninput(input.value)" autofocus >
+
+     <div class="my-2 text-success" *ngIf="enteredText===mytext">
+        success
+     </div>
+   
+
+</div>

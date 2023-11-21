@@ -1,0 +1,35 @@
+<div class="container mt-5">
+
+    <table class="table">
+
+        <thead>
+
+            <tr>
+
+                <th scope="col">Title</th>
+
+                <th scope="col">Word Count</th>
+
+                <th scope="col">Snippet</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr *ngFor="let vada of PagesAria">
+
+                <td>{{vada.title}}</td>
+
+                <td>{{vada.wordcount}}</td>
+
+                <td [innerHTML]="vada.snippet"></td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
